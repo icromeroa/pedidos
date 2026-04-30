@@ -1,19 +1,19 @@
 package pedidos;
 
 public class CongeladoAgua extends ProductosCongelados {
-    private String salinidad;
+    private double salinidad;
 
     public CongeladoAgua(String fechaCaducidad, int numeroDeLote, String fechaEnvasado, String paisOrigen,
-                         int temperaturaRecomendada, double salinidadAgua) {
+                         int temperaturaRecomendada, double salinidad) {
         super(fechaCaducidad, numeroDeLote, fechaEnvasado, paisOrigen, temperaturaRecomendada);
         this.salinidad = salinidad;
     }
 
-    public String getSalinidad() {
+    public double getSalinidad() {
         return salinidad;
     }
 
-    public void setSalinidad(String salinidad) {
+    public void setSalinidad(double salinidad) {
         this.salinidad = salinidad;
     }
 

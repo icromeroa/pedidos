@@ -7,8 +7,8 @@ public class CongeladoAire extends ProductosCongelados {
     private double vaporAgua;
 
     public CongeladoAire(String fechaCaducidad, int numeroDeLote, String fechaEnvasado, String paisOrigen,
-                         int temperaturaRecomendada, double porcentajeNitrogeno, double porcentajeOxigeno,
-                         double porcentajeCo2, double porcentajeVaporAgua) {
+                         int temperaturaRecomendada, double nitrogeno, double oxigeno,
+                         double co2, double vaporAgua) {
         super(fechaCaducidad, numeroDeLote, fechaEnvasado, paisOrigen, temperaturaRecomendada);
         this.nitrogeno = nitrogeno;
         this.oxigeno = oxigeno;
