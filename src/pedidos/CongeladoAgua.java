@@ -1,10 +1,12 @@
 package pedidos;
 
-public class CongeladoAgua {
+public class CongeladoAgua extends ProductosCongelados {
     private String salinidad;
 
-    public CongeladoAgua(String salinidad) {
-        this.salinidad = salinidad;
+    public CongeladoAgua(String fechaCaducidad, int numeroDeLote, String fechaEnvasado, String paisOrigen,
+                         int temperaturaRecomendada, double salinidadAgua) {
+        super(fechaCaducidad, numeroDeLote, fechaEnvasado, paisOrigen, temperaturaRecomendada);
+        this.salinidadAgua = salinidadAgua;
     }
 
     public String getSalinidad() {
@@ -13,5 +15,12 @@ public class CongeladoAgua {
 
     public void setSalinidad(String salinidad) {
         this.salinidad = salinidad;
+    }
+
+    @Override
+    public void mostrarInformacion() {
+        System.out.print("CONGELADO POR AGUA -> ");
+        super.mostrarInformacion();
+        System.out.println(" | Salinidad: " + salinidadAgua + " g/L");
     }
 }

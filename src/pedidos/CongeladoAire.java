@@ -1,24 +1,27 @@
 package pedidos;
 
-public class CongeladoAire {
-    private double nitrgoneo;
+public class CongeladoAire extends ProductosCongelados {
+    private double nitrogeno;
     private double oxigeno;
     private double co2;
     private double vaporAgua;
 
-    public CongeladoAire(double nitrgoneo, double oxigeno, double co2, double vaporAgua) {
-        this.nitrgoneo = nitrgoneo;
+    public CongeladoAire(String fechaCaducidad, int numeroDeLote, String fechaEnvasado, String paisOrigen,
+                         int temperaturaRecomendada, double porcentajeNitrogeno, double porcentajeOxigeno,
+                         double porcentajeCo2, double porcentajeVaporAgua) {
+        super(fechaCaducidad, numeroDeLote, fechaEnvasado, paisOrigen, temperaturaRecomendada);
+        this.nitrogeno = nitrogeno;
         this.oxigeno = oxigeno;
         this.co2 = co2;
         this.vaporAgua = vaporAgua;
     }
 
-    public double getNitrgoneo() {
-        return nitrgoneo;
+    public double getNitrogneo() {
+        return nitrogeno;
     }
 
-    public void setNitrgoneo(double nitrgoneo) {
-        this.nitrgoneo = nitrgoneo;
+    public void setNitrogeno(double nitrgoneo) {
+        this.nitrogeno = nitrogeno;
     }
 
     public double getOxigeno() {
@@ -43,5 +46,13 @@ public class CongeladoAire {
 
     public void setVaporAgua(double vaporAgua) {
         this.vaporAgua = vaporAgua;
+    }
+
+    @Override
+    public void mostrarInformacion() {
+        System.out.print("CONGELADO POR AIRE -> ");
+        super.mostrarInformacion();
+        System.out.println(" | Composición Aire: N2:" + nitrogeno + "% O2:" + oxigeno +
+                "% CO2:" + co2 + "% H2O:" + vaporAgua + "%");
     }
 }
